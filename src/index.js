@@ -7,6 +7,8 @@ import reportWebVitals from './reportWebVitals';
 import history from './utils/history';
 import Dashboard from './screens/Dashboard'
 
+import { TweetProvider, useTweet } from './utils/tweet-context'
+
 
 
 
@@ -28,12 +30,16 @@ export class Routing extends Component {
 
     return (
       <React.Fragment>
-        <Router history={history}>
-          <Switch>
+        <TweetProvider>
+          <Dashboard/>
 
+        </TweetProvider>
+      
+        {/* <Router history={history}>
+          <Switch>
             <Route path="/" component = {Dashboard}/>
           </Switch>
-        </Router>
+        </Router> */}
       </React.Fragment>
     );
   }

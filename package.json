@@ -9,10 +9,12 @@
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
+    "natural": "^5.0.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "sentiment": "^5.0.2",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
@@ -40,6 +42,7 @@
     ]
   },
   "devDependencies": {
+    "@types/sentiment": "^5.0.0",
     "autoprefixer": "^9.8.6",
     "postcss": "^7.0.35",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2"
