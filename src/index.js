@@ -8,6 +8,7 @@ import history from './utils/history';
 import Dashboard from './screens/Dashboard'
 
 import { TweetProvider, useTweet } from './utils/tweet-context'
+import Header from './components/Header';
 
 
 
@@ -30,10 +31,11 @@ export class Routing extends Component {
 
     return (
       <React.Fragment>
-        <TweetProvider>
-          <Dashboard/>
+        <Dashboard/>
+        {/* <TweetProvider>
+    
 
-        </TweetProvider>
+        </TweetProvider> */}
       
         {/* <Router history={history}>
           <Switch>

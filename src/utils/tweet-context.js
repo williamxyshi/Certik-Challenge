@@ -11,8 +11,8 @@ function useTweet() {
   }
 
 function TweetProvider(props) {
-    const [count, setCount] = React.useState(0)
-    const value = React.useMemo(() => [count, setCount], [count])
+    const [tweets, setTweets] = React.useState([])
+    const value = React.useMemo(() => [tweets, setTweets], [tweets])
     return <TweetContext.Provider value={value} {...props} />
   }
   export {TweetProvider, useTweet}
