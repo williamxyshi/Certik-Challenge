@@ -1,6 +1,8 @@
 import { PieChart } from 'react-minimal-pie-chart';
   
-export default function Chart() {
+export default function Chart(positive, negative, neutral) {
+    console.log(positive)
+
     return (
     <PieChart
             data={[
