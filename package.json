@@ -24,7 +24,7 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco build",
+    "build": "rimraf ./build && CI=false && craco build && rimraf ./build/**/*.map",
     "test": "craco test",
     "eject": "react-scripts eject"
   },

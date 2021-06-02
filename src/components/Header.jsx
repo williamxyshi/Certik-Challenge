@@ -10,7 +10,7 @@ const navigation = [
     return (
       <header className="bg-green-800">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
-          <div className="w-full py-6 flex items-center justify-between border-b border-green-500 lg:border-none">
+          <div className="w-full py-3 flex items-center justify-between border-b border-green-500 lg:border-none">
           <h1 className="text-3xl font-extrabold tracking-tight text-yellow-300 sm:text-3xl lg:text-3xl">
                 Twitter Sentiment Dashboard by will for Certik
               </h1>
