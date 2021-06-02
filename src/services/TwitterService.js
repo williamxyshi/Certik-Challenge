@@ -15,7 +15,7 @@ import axios from 'axios'
 class TwitterService{
     
     async getTweets(){
-        var response = await axios.get('http://localhost:4000/api/tweet/?username=CertikOrg', {} )
+        var response = await axios.get('https://rocky-brushlands-45638.herokuapp.com/api/tweet/?username=CertikOrg', {} )
         return response.data
     }
 

@@ -6,6 +6,9 @@ import TwitterService from '../services/TwitterService'
 import CalendarHeatmap from 'react-calendar-heatmap';
 import 'react-calendar-heatmap/dist/styles.css';
 
+import ReactTooltip from 'react-tooltip';
+
+
 
 
 import {
@@ -21,7 +24,9 @@ import WordCloud from '../components/WordCloud';
   
   export default function Example() {
     const [{positive, negative, neutral}, setTweets] = useState({});
-    const [{activity}, setActivity] = useState({});
+    const [activity, setActivity] = useState(
+      [{date: '2016-01-01', count: 12}]
+    );
 
     // const [negative, setNegative] = useState([]);
     // const [neutral, setNeutral] = useState([]);
@@ -32,12 +37,28 @@ import WordCloud from '../components/WordCloud';
           positive: res.data.positive,
           neutral: res.data.neutral,
           negative: res.data.negative })
-          setActivity(res.activity)
+
+        var tempActivity = []
+        Object.entries(res.activity).forEach( entry =>{
+          console.log(entry)
+          tempActivity.push({
+              date: entry[0],
+              count: entry[1]
+            })
+        })
+        setActivity(tempActivity)
+
         // setPositive(res.data.positive)
         // setNeutral(res.data.neutral)
         // setNegative(res.data.negative)
       })
     }, []);
+
+
+    var oneYearAgo = new Date();
+    oneYearAgo.setFullYear(oneYearAgo.getFullYear() -1);
+    const startDate = oneYearAgo.toISOString().split('T')[0]
+
     return (
       <>
       <Header/>
@@ -45,21 +66,34 @@ import WordCloud from '../components/WordCloud';
 
       <header className="bg-white shadow">
         <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-gray-900">Dashboard</h1>
+          <h1 className="text-3xl font-bold text-gray-900">CertikOrg</h1>
         </div>
       </header>
       <main>
         <div className="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
           {/* Replace with your content */}
+          <h1 className="text-xl font-bold text-gray-900">Twitter Activity</h1>
+          <CalendarHeatmap
+                startDate={startDate}
+                endDate={new Date()}
+                values={activity}
+                showWeekdayLabels={true}
+                classForValue={value => {
+                  if (!value) {
+                    return 'color-empty';
+                  }
+                  return `color-github-${value.count}`;
+                }}
+                tooltipDataAttrs={value => {
+                  return {
+                    'data-tip': `${
+                      value.count
+                    }`,
+                  };
+                }}
+              />  <ReactTooltip/>
             <Chart tweets={positive, negative, neutral}/>  
-            <CalendarHeatmap
-                startDate={new Date('2021-01-01')}
-                endDate={new Date('2021-04-01')}
-                values={[
-                  activity
-                  // ...and so on
-                ]}
-              />  
+
             <WordCloud/>      
           {/* /End replace */}
         </div>
