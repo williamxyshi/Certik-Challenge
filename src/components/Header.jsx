@@ -16,8 +16,8 @@ const navigation = [
               </h1>
             <div className="ml-10 space-x-4">
               <a
-                href="#"
-                className="inline-block bg-yellow-300 py-2 px-4 border border-transparent rounded-md text-base font-medium text-green-800 hover:bg-green-50"
+                href="https://github.com/williamxyshi/sentiment-dashboard"
+                className="inline-block bg-yellow-300 py-2 px-4 border border-transparent rounded-md text-base font-medium text-green-800 hover:bg-green-200"
               >
                 Contribute on Github
               </a>
