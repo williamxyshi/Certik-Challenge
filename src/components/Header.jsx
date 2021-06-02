@@ -12,7 +12,7 @@ const navigation = [
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" aria-label="Top">
           <div className="w-full py-3 flex items-center justify-between border-b border-green-500 lg:border-none">
           <h1 className="text-3xl font-extrabold tracking-tight text-yellow-300 sm:text-3xl lg:text-3xl">
-                Twitter Sentiment Dashboard by will for Certik
+                Twittiment by Will for Certik
               </h1>
             <div className="ml-10 space-x-4">
               <a
