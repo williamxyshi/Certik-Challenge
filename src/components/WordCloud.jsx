@@ -19,7 +19,7 @@ const words = [
     },
   ]
   
-export default function Chart() {
+export default function WordCloud() {
     return (
         <ReactWordcloud words={words} />
     )
