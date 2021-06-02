@@ -127,7 +127,7 @@ import WordCloud from '../components/WordCloud';
             <div className="flex flex-row mx-5 h-auto content-center">
 
                   <div className="bg-white mx-5 h-auto rounded-lg">
-                  <a className="text-md font-bold text-green-900">Twitter Keyword Sentiment Analysis </a>
+                  <a className="text-md font-bold text-green-900">Key Word Sentiment Analysis </a>
 
                       <Chart style={{marginBottom:30}}count={count}/>
       
