@@ -25,7 +25,7 @@ import WordCloud from '../components/WordCloud';
 
   
   export default function Example() {
-    const [sortDate, setSortDate] = useState('m');
+    const [sortDate, setSortDate] = useState('y');
 
     const [tweets, setTweets] = useState([{},{},{}]);
     const [count, setCount] = useState({});

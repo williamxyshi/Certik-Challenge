@@ -32,28 +32,24 @@ const words = [
   const size = [800, 300];
   
 export default function WordCloud(props) {
-    console.log(props.tweets)
 
     /**
      * NEED to move these 3 into async fucntison and launch
      */
     var data = []
     for (let [key, value] of Object.entries(props.tweets[0])) {
-        console.log(key, value);
         data.push({
             text: key,
             value: value.count
         })
     }
     for (let [key, value] of Object.entries(props.tweets[1])) {
-        console.log(key, value);
         data.push({
             text: key,
             value: value.count
         })
     }
     for (let [key, value] of Object.entries(props.tweets[2])) {
-        console.log(key, value);
         data.push({
             text: key,
             value: value.count
