@@ -25,7 +25,7 @@ import WordCloud from '../components/WordCloud';
 
   
   export default function Example() {
-    const [sortDate, setSortDate] = useState('y');
+    const [sortDate, setSortDate] = useState('m');
 
     const [tweets, setTweets] = useState([{},{},{}]);
     const [count, setCount] = useState({});
@@ -63,7 +63,7 @@ import WordCloud from '../components/WordCloud';
 
 
     var oneYearAgo = new Date();
-    oneYearAgo.setFullYear(oneYearAgo.getFullYear() -1);
+    oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
     const startDate = oneYearAgo.toISOString().split('T')[0]
     const total = count.negative + count.neutral + count.positive
 
@@ -101,7 +101,11 @@ import WordCloud from '../components/WordCloud';
         </div>
         <div className="bg-white max-w-7xl mx-auto py-6 sm:px-6 lg:px-8 content-center">
           <div className="max-w-6xl mx-auto">
+            <div className="flex">
             <h1 className="text-xl font-bold text-green-900">Tweet Activity</h1>
+            <h4 className="text-md font-bold text-green-900">Tweet Activity</h4>
+
+            </div>
             <CalendarHeatmap
                   startDate={startDate}
                   endDate={new Date()}
