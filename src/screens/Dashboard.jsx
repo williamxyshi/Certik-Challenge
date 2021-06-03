@@ -103,7 +103,6 @@ import WordCloud from '../components/WordCloud';
           <div className="max-w-6xl mx-auto">
             <div className="flex">
             <h1 className="text-xl font-bold text-green-900">Tweet Activity</h1>
-            <h4 className="text-md font-bold text-green-900">Tweet Activity</h4>
 
             </div>
             <CalendarHeatmap
